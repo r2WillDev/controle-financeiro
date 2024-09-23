@@ -1597,14 +1597,14 @@
           }
         }
       },
-      "Dima.Core/1.0.0": {
+      "Dima.core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
-          "bin/placeholder/Dima.Core.dll": {}
+          "bin/placeholder/Dima.core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Dima.Core.dll": {}
+          "bin/placeholder/Dima.core.dll": {}
         }
       }
     }
@@ -4538,15 +4538,15 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Dima.Core/1.0.0": {
+    "Dima.core/1.0.0": {
       "type": "project",
-      "path": "../Dima.Core/Dima.Core.csproj",
-      "msbuildProject": "../Dima.Core/Dima.Core.csproj"
+      "path": "../Dima.Core/Dima.core.csproj",
+      "msbuildProject": "../Dima.Core/Dima.core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Dima.Core >= 1.0.0",
+      "Dima.core >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 8.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.8",
@@ -4586,8 +4586,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.Core.csproj": {
-              "projectPath": "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.Core.csproj"
+            "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.core.csproj": {
+              "projectPath": "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.core.csproj"
             }
           }
         }
