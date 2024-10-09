@@ -41,38 +41,38 @@ app.MapPost(
 app.Run();
 
 //Request
-public class Request
-{
-    public string Title { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
-}
+// public class Request
+// {
+//     public string Title { get; set; } = string.Empty;
+//     public string Description { get; set; } = string.Empty;
+// }
 
-//response
+// //response
 
-public class Response
-{
-    public long Id { get; set; }
-    public string Title { get; set; } = string.Empty;
-}
+// public class Response
+// {
+//     public long Id { get; set; }
+//     public string Title { get; set; } = string.Empty;
+// }
 
-//handler
-public class Handler(AppDbContext context)
-{
-    public Response Handle(Request request)
-    {
-        var category = new Category
-        {
-            Title = request.Title,
-            Description = request.Description
-        };
+// //handler
+// public class Handler(AppDbContext context)
+// {
+//     public Response Handle(Request request)
+//     {
+//         var category = new Category
+//         {
+//             Title = request.Title,
+//             Description = request.Description
+//         };
 
-        context.Categories.Add(category);
-        context.SaveChanges();
+//         context.Categories.Add(category);
+//         context.SaveChanges();
 
-        return new Response
-        {
-            Id = category.Id,
-            Title = category.Title
-        };
-    }
-}
+//         return new Response
+//         {
+//             Id = category.Id,
+//             Title = category.Title
+//         };
+//     }
+// }

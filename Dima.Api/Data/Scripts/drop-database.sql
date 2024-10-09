@@ -1,4 +1,4 @@
---caso precisar excluir o banco
+--caso precisar pipocar o banco
 
 USE [master];
 GO
