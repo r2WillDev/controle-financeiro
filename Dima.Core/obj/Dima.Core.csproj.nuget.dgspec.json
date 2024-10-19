@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.Core.csproj": {}
+    "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.Core.csproj": {
+    "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.Core.csproj",
-        "projectName": "Dima.Core",
-        "projectPath": "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.Core.csproj",
+        "projectUniqueName": "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.core.csproj",
+        "projectName": "Dima.core",
+        "projectPath": "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\Dima.core.csproj",
         "packagesPath": "C:\\Users\\arthu\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\arthu\\source\\repos\\desafios\\Balta.io\\Dima\\Dima.Core\\obj\\",
         "projectStyle": "PackageReference",

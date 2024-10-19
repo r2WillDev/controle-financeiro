@@ -1,5 +1,9 @@
 using Dima.Api.Data;
+using Dima.Api.Handlers;
+using Dima.Core.Handlers;
 using Dima.Core.Models;
+using Dima.Core.Requests.Categories;
+using Dima.Core.Responses;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
 
@@ -21,7 +25,7 @@ builder.Services.AddSwaggerGen(x =>
 {
     x.CustomSchemaIds(n => n.FullName);
 });
-builder.Services.AddTransient<Handler>();
+builder.Services.AddTransient<ICategoryHandler, CategoryHandler>();
 
 var app = builder.Build();
 
@@ -31,12 +35,11 @@ app.UseSwaggerUI();
 
 app.MapPost(
         "/v1/categories",
-
-        (Request request, Handler handler)
-        => handler.Handle(request))
+        (CreateCategoryRequest request, ICategoryHandler handler)
+        => handler.CreateAsync(request))
     .WithSummary("Cria uma nova transação")
-    .WithName("Categories:Create")
-    .Produces<Response>();
+    .WithName("Categories: Create")
+    .Produces<Response<Category>>();
 
 app.Run();
 
