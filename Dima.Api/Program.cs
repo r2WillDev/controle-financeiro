@@ -35,11 +35,74 @@ app.UseSwaggerUI();
 
 app.MapPost(
         "/v1/categories",
-        (CreateCategoryRequest request, ICategoryHandler handler)
-        => handler.CreateAsync(request))
-    .WithSummary("Cria uma nova transação")
+        async (CreateCategoryRequest request, ICategoryHandler handler)
+        => await handler.CreateAsync(request))
+    .WithSummary("Cria uma nova categoria")
     .WithName("Categories: Create")
-    .Produces<Response<Category>>();
+    .Produces<Response<Category?>>();
+
+app.MapPut(
+        "/v1/categories/{id}",
+        async (long id,
+            UpdateCategoryRequest request, 
+            ICategoryHandler handler) 
+        =>
+        {
+            request.Id = id;
+            return await handler.UpdateAsync(request);
+            })
+    .WithSummary("atualiza a categoria")
+    .WithName("Categories: Update")
+    .Produces<Response<Category?>>();
+
+app.MapDelete(
+        "/v1/categories/{id}",
+        async (long id,
+            //DeleteCategoryRequest request, 
+        ICategoryHandler handler)
+        => {
+            var request =  new DeleteCategoryRequest
+            {
+                Id = id,
+                UserId = "teste@testandomuito.com"
+            };
+            return await handler.DeleteAsync(request);
+            })
+    .WithSummary("deleta uma Categoria")
+    .WithName("Categories: Delete")
+    .Produces<Response<Category?>>();
+
+app.MapGet(
+        "/v1/categories/{id}",
+        async (long id,
+            //DeleteCategoryRequest request, 
+        ICategoryHandler handler)
+        => {
+            var request =  new GetCategoryByIdRequest
+            {
+                Id = id,
+                UserId = "teste@testandomuito.com"
+            };
+            return await handler.GetByIdAsync(request);
+            })
+    .WithSummary("retorna uma Categoria")
+    .WithName("Categories: Get by Id")
+    .Produces<Response<Category?>>();
+
+app.MapGet(
+        "/v1/categories/",
+        async (
+        ICategoryHandler handler)
+        => {
+            var request =  new GetAllCategoriesRequest
+            {
+                UserId = "teste@testandomuito.com"
+            };
+            return await handler.GetAllAsync(request);
+            })
+    .WithSummary("retorna todas Categoria")
+    .WithName("Categories: Get by Id")
+    .Produces<PagedResponse<List<Category>?>>();
 
 app.Run();
 
