@@ -16,7 +16,7 @@ namespace Dima.Api.Endpoints.Categories
     public class GetAllCategoriesEndpoint : IEndpoint
 
     {
-        public static void map(IEndpointRouteBuilder app)
+        public static void Map(IEndpointRouteBuilder app)
         => app.MapGet("/", HandleAsync)
             .WithName("Categories: Get All")
             .WithSummary("Recupera todas as categorias")

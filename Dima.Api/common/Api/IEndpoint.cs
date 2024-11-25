@@ -7,6 +7,6 @@ namespace Dima.Api.common.Api
 {
     public interface IEndpoint
     {
-        static abstract void map(IEndpointRouteBuilder app);
+        static abstract void Map(IEndpointRouteBuilder app);
     }
 }

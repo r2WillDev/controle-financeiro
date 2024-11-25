@@ -32,7 +32,7 @@ namespace Dima.Api.Data.Mappings
             builder.Property(x => x.CreatedAt)
                 .IsRequired(true);
 
-            builder.Property(x => x.PaidOrRecievedAt)
+            builder.Property(x => x.PaidOrReceivedAt)
                 .IsRequired(false);
 
             builder.Property(x => x.UserId)
